@@ -11,13 +11,22 @@ words = [
     "lista",
 ]
 
-word = random.choice(words)
-guessed = []
-attempts = 6
-points = 0
+dic_words = {"lenguaje": ["python"], "estructura": ["funcion", "cadena", "bucle", "variable"], "tipo de dato": ["entero", "lista"]}
 
 print("¡Bienvenido al Ahorcado!")
 print()
+print ("Aqui tienes las categorias disponibles, elegi una: ")
+for categoria in dic_words:
+    print (" ", categoria)
+categoria_elegida = input ("Elegi una categoria: ").lower()
+
+if categoria_elegida not in dic_words:
+    print ("La categoria ingresada no existe")
+else
+    word = random.choise (dic_words[categoria_elegida])
+    guessed = []
+    attempts = 6
+    points = 0
 
 while attempts > 0:
     # Mostrar progreso
